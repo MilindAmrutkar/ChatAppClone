@@ -18,6 +18,7 @@ import com.backtocoding.chatappclone.ui.SingleChatScreen
 import com.backtocoding.chatappclone.ui.SingleStatusScreen
 import com.backtocoding.chatappclone.ui.StatusListScreen
 import com.backtocoding.chatappclone.ui.theme.ChatAppCloneTheme
+import dagger.hilt.android.AndroidEntryPoint
 
 sealed class DestinationScreen(val route: String) {
     object Signup : DestinationScreen("signup")
@@ -34,6 +35,7 @@ sealed class DestinationScreen(val route: String) {
     }
 }
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
